@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <script src="https://kit.fontawesome.com/515b06e286.js" crossorigin="anonymous"></script>
+    <style>
+        #site-search {
+            height: 30px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        #container {
+            display: none;
+            transition: all o.5s ease-in;
+        }
+
+        #container.active {
+            display: block;
+            transition: all o.5s ease-in;
+        }
+
+        #sortingDiv {
+            padding: 10px 50px;
+            display: flex;
+            justify-content: flex-end;
+
+        }
+
+        #sortingDivInside {
+            display: flex;
+            width: 350px;
+            justify-content: space-around;
+        }
+
+        #apply {
+            background-color: #6366F1;
+            border-radius: 5px;
+            width: 30px;
+        }
+
+        #sorting {
+            text-align: center;
+            width: 250px;
+        }
+
+        #profileHeading {
+            padding: 20px 33px;
+            font-size: large;
+            letter-spacing: 1.5px;
+        }
+
+        @media (max-width:375px) {
+            #sortingDiv {
+                padding: 10px 0;
+            }
+
+            #sorting {
+                width: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="body-font" style="background-color:  #4299E1;">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <span class="ml-3 text-xl">Dashboard</span>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-gray-900"><input type="search" id="site-search" name="search"
+                        placeholder="Search" /></a>
+            </nav>
+        </div>
+    </header>
+    <div id="sortingDiv">
+        <div id="sortingDivInside">
+            <span>
+                Sort:
+            </span>
+            <span>
+                <select name="sorting" id="sorting">
+                    <option value="low">Course : Low to High</option>
+                    <option value="high">Course : High to Low</option>
+                </select>
+            </span>
+            <span><button id="apply">Go</button></span>
+        </div>
+    </div>
+    <h1 id="profileHeading"></h1>
+    <div class="flex justify-between items-center m-4">
+        <h5 class="text-xl ml-4 leading-none text-gray-900 dark:text-white">My Students</h5>
+    </div>
+    <div class="p-4 w-full max-w-full bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700"
+        id="layout">
+        <script src="./viewStudents.js"></script>
+</body>
+
+
+</html>

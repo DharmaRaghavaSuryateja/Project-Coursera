@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #heading {
+            display: flex;
+            justify-content: center;
+            background-color: #4299E1;
+            height: 50px;
+            align-items: center;
+            font-size: large;
+            letter-spacing: 2px;
+        }
+
+        #flex {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #button {
+            color: white
+        }
+
+        .card {
+
+            margin: 40px 50px;
+            border: 1px solid black;
+        }
+
+        #Fakeform {
+            display: flex;
+            width: 250px;
+            justify-content: space-between;
+        }
+
+        .myProfileTop {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .myProfileheading {
+            display: flex;
+            margin-left: 50px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+
+        }
+
+        @media(max-width:760px) {
+            #flex {
+                flex-wrap: wrap;
+
+            }
+
+            #flex a {
+                margin: 10px 0;
+            }
+
+            #Fakeform {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <p id="heading">My Profile</p>
+    <div class="myProfileTop">
+        <div class="myProfileheading">
+            <div>
+                <b>Name:</b>
+            </div>
+            <div id="headingName" style="position: absolute; left: 130px;">
+
+            </div>
+        </div>
+        <div class="myProfileheading">
+            <div>
+                <b>
+                    Email:
+                </b>
+
+            </div>
+            <div id="headingEmail" style="position: absolute; left: 130px;">
+
+            </div>
+        </div>
+        <div class="myProfileheading">
+            <div>
+                <b>
+                    Role:
+                </b>
+
+            </div>
+            <div style="position: absolute; left: 130px;">
+                Student
+            </div>
+        </div>
+    </div>
+    <div id="layout"></div>
+    <script src="./myProfile.js"></script>
+</body>
+</html>

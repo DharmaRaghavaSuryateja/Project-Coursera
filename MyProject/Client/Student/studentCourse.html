@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/515b06e286.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/515b06e286.js" crossorigin="anonymous"></script>
+
+    <style>
+        #heading {
+            display: flex;
+            padding: 20px 0;
+            justify-content: center;
+            font-size: 25px;
+            color: black;
+        }
+
+        .filter,
+        .span {
+            padding: 5px 30px;
+        }
+
+        #span,
+        #dive {
+
+            padding: 5px 30px;
+        }
+
+        .spann {
+            margin-left: 30px;
+        }
+
+        #headingName {
+
+            font-size: large;
+        }
+
+        #headerbelow {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 100px 0 100px;
+            margin-bottom: 40px;
+        }
+
+        #headerbelow.active {
+            padding: 20px 20px 0 20px;
+        }
+
+        #apply {
+            background-color: #6366F1;
+            width: 40px;
+            border-radius: 5px;
+            margin-left: 8px;
+        }
+
+        #sorting {
+            text-align: center;
+            border: 0.2px solid black;
+
+        }
+
+        #filtertitle {
+            padding: 5px 30px;
+            font-weight: 600;
+        }
+
+        #flexbutton {
+            display: flex;
+            justify-content: space-between;
+            width: 250px;
+            margin-top: 20px;
+            padding: 0 25px;
+        }
+
+        label {
+            display: block;
+            font: 1rem "Fira Sans", sans-serif;
+        }
+
+        input,
+        label {
+            margin: 0.4rem 0;
+            border-radius: 5px;
+        }
+
+        #navbar {
+            width: 18vw;
+            height: 100vh;
+            background-color: #4299E1;
+            left: -18vw;
+            position: fixed;
+            overflow-y: scroll;
+
+        }
+
+        #navbar.active {
+            left: 0;
+            border-right: 1px solid black;
+        }
+
+        #main {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            overflow: scroll;
+
+
+
+        }
+
+        #main.active {
+            left: 18vw;
+            width: 82vw;
+        }
+
+        .subCardHeading {
+            padding: 15px 0;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            background-color: #4299E1;
+            display: flex;
+            justify-content: center;
+            margin: 40px 0 30px 0;
+            color: white;
+
+        }
+
+        #cross {
+            float: right;
+            position: sticky;
+            right: 15px;
+            top: 15px;
+        }
+
+        @media(max-width:1279px) {
+            #navbar.active {
+                z-index: 1;
+                width: 236px;
+            }
+
+            #main.active {
+                width: 100vw;
+                left: 0;
+            }
+        }
+
+        @media(max-width:768px) {
+            #innerheader {
+
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        @media(max-width:425px) {
+            #headerbelow {
+                padding: 10px 20px;
+            }
+
+            #site-search {
+                margin-top: 15px;
+            }
+        }
+
+        @media(max-width:375px) {
+            #upnav {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display: flex;">
+        <div id="navbar">
+            <div id="cross"><i class="fa-solid fa-xmark"></i></div>
+
+            <div id="heading">
+                Filter
+            </div>
+            <div id="filtertitle">
+                Running Time:
+            </div>
+            <div>
+                <div class="span">
+                    <input type="radio" name="runningTime" id="" value=10 class="filter"><span class="spann">Above 10
+                        Hours</span>
+                </div>
+                <div class="span">
+                    <input type="radio" name="runningTime" id="" value=20 class="filter"><span class="spann">Above 20
+                        Hours</span>
+                </div>
+                <div class="span">
+                    <input type="radio" name="runningTime" id="" value=30 class="filter"><span class="spann">Above 30
+                        Hours</span>
+                </div>
+                <div class="span">
+                    <input type="radio" name="runningTime" id="" value=40 class="filter"><span class="spann">Above 40
+                        Hours</span>
+                </div>
+            </div>
+            <div id="filtertitle">
+                Category:
+            </div>
+            <div id="category">
+
+            </div>
+            <div id="filtertitle">
+                Rating
+            </div>
+            <div>
+                <div class="span">
+                    <input type="radio" name="rating" id="" value=1 class="filter"><span class="spann">Above 1
+                        Star</span>
+                </div>
+                <div class="span">
+                    <input type="radio" name="rating" id="" value=2 class="filter"><span class="spann">Above 2
+                        Star</span>
+                </div>
+                <div class="span">
+                    <input type="radio" name="rating" id="" value=3 class="filter"><span class="spann">Above 3
+                        Star</span>
+                </div>
+                <div class="span">
+                    <input type="radio" name="rating" id="" value=4 class="filter"><span class="spann">Above 4
+                        Star</span>
+                </div>
+            </div>
+            <div id="flexbutton">
+                <button
+                    class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base ml-2 mt-4 md:mt-0"
+                    type="submit" id="navbarbtn">
+                    Apply
+                </button>
+                <button
+                    class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base ml-2 mt-4 md:mt-0"
+                    type="submit" id="clear">
+                    Clear
+                </button>
+            </div>
+        </div>
+
+        <div id="main">
+            <header class="text-gray-600 body-font" style="background-color: #4299e1">
+                <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center" id="innerheader">
+                    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0  mr-6">
+                        <span id="mainIcon" style="display: flex;"><i class="fa-solid fa-bars"></i></span>
+                    </a>
+                    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                        <i class="fa-brands fa-readme"></i>
+                        <span class="ml-3 text-xl">Coursera</span>
+                    </a>
+                    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center" id="upnav">
+                        <a class="mr-5 hover:text-gray-900" onclick="window.location.assign('./myProfile.html')">My
+                            Profile</a>
+                        <div class="mr-5 hover:text-gray-900 rounded">
+                            <input type="search" id="site-search" name="search" style="text-align: center;" />
+
+
+                        </div>
+                    </nav>
+
+                    <button
+                        class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base ml-2 mt-4 md:mt-0"
+                        id="logout">
+                        Logout
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+
+                </div>
+            </header>
+            <div id="headerbelow">
+                <div id="headingName">
+                </div>
+                <div>
+                    <span>Sort : </span>
+                    <select name="sorting" id="sorting">
+                        <option value="title asc">Title</option>
+                        <option value="rating asc">Rating : Low to High</option>
+                        <option value="rating desc">Rating : High to Low</option>
+                        <option value="runningTime asc">Duration : Low to High</option>
+                        <option value="runningTime desc">Duration : High to Low</option>
+                    </select>
+                    <span><button id="apply">Go</button></span>
+                </div>
+
+
+            </div>
+
+            <div style="display:flex;margin: 0 100px;justify-content: flex-end;box-sizing: border-box;">
+                <span id="gridView">
+
+                    <i class="fa-solid fa-table-cells"></i>
+                </span>
+                <span style="margin-left:10px" id="listView">
+                    <i class="fa-sharp fa-solid fa-list"></i>
+                </span>
+            </div>
+            <div class="container px-5 mx-auto mt-4" id="layout"></div>
+
+
+        </div>
+        <script src="./studentCourse.js"></script>
+</body>
+</html>

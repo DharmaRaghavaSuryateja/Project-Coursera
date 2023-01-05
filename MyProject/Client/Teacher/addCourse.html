@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <style>
+        body {
+            padding: 100px 50px 0 50px;
+        }
+
+        h1 {
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Add Course</h1>
+    <form>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Enter Title"
+                name="title" required />
+        </div>
+        <div class="form-group">
+            <label for="category">Category:</label>
+            <select name="category" class="form-control" id="category"></select>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" placeholder="Enter Description" name="description"
+                required></textarea>
+
+        </div>
+        <div class="form-group">
+            <label for="runningTime">Running Time</label>
+            <input type="text" class="form-control" id="runningTime" placeholder="Enter Duration" name="runningTime"
+                required />
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="image">Enter Image Link</label>
+            <input type="text" class="form-control" id="image" placeholder="Enter Image Address" name="image"
+                required />
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="btn">Submit</button>
+    </form>
+    <script src="./addCourse.js"></script>
+</body>
+
+</html>
